@@ -40,12 +40,10 @@ def printWords(groupedWordMap):
 		print(str(count) + "     : " + ', '.join(groupedWordMap[count]))
 
 if __name__ == '__main__':
-	filenames = sys.argv[1:]
-	if not filenames:
-		# For quick testing purposes
+	parameters = sys.argv[1:]
+	if not parameters:
 		sys.exit("Missing: a file URL.\nUsage: 'DetectWordDuplicatesInFiles.py <FILE_URL1> <FILE_URL2> <FILE_URL...>'")
-		filenames.append('WordDuplicates.txt')
-	lines = fetchLinesFromFile(filenames)
+	lines = fetchLinesFromFile(parameters)
 	
 	wordMap = countWords(lines)
 	groupedWordMap = groupDuplicatedWords(wordMap)
