@@ -5,7 +5,7 @@ import os, sys
 
 def visitSubFolders(root_path, max_length):
 	exceeding_urls = []
-	for dirname, _, parameters in os.walk('.'):
+	for dirname, _, parameters in os.walk(root_path):
 		for filename in parameters:
 			relative_path = os.path.join(dirname, filename)
 			index = 0
@@ -22,7 +22,7 @@ def printReport(exceeding_urls, max_length, root_path):
 	print('Maximum path length: ' + str(max_length))
 	print('Root path: ' + root_path)
 	print('\n')
-	print('Exceeding relative paths (count: ' + str(len(exceeding_urls)) + '):')
+	print('Exceeding paths (count: ' + str(len(exceeding_urls)) + '):')
 	for url in sorted(exceeding_urls):
 		print (url)
 	
