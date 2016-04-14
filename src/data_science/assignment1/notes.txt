@@ -1,0 +1,48 @@
+Køb
+
+Køb et kvalificerende produkt
+
+Du kan se de kvalificerende produkter, belønninger og købsperioder på siden Kvalificerende produkter.
+
+Køb skal foretages fra a en godkendt forhandler
+
+Køb skal være gjort mellem den 18 Marts og den 17 April 2016
+
+Opkræv
+
+Besøg siden Opkræv nu på kampagnewebstedet
+
+Du skal oplyse følgende:
+
+Købsdato
+Købssted
+Faktura-/kvitteringsnummer
+Serienummeret
+Upload købsbevis
+Personlige oplysninger
+Bankoplysninger
+Klik her for flere detaljer
+
+Betaling
+
+Din opkrævning vil blive betalt inden for 30 dage fra bekræftelse til din udpegede bankkonto.
+
+Spørgsmål?
+
+Besøg siden Kampagnesupport for Ofte stillede spørgsmål & Kontaktoplysninger
+
+Kontrollér status for din opkrævning til enhver tid ved hjælp af Spor min opkrævning
+
+Klik her for fuldstændige vilkår og betingelser
+
+
+
+Journalism goes towards data science domain which is getting more and more popular.
+
+
+
+Evidence based estimates
+When you make a prediction, you should put your repotation behind it. If you are wrong, this should be recorded and influence your future predictions.
+
+C:\Users\bink\Documents\GitHub\datasci_course_materials\assignment1>
+python2 happiest_state.py AFINN-111.txt output.txt
