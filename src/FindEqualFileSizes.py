@@ -9,6 +9,7 @@ import os, sys
 
 def visitSubFolders(root_path, text_file):
 	encountered_sizes = {}
+	delimiter = ','
 	file_count_in_directories = {}
 	for dirpath, _, filenames in os.walk(root_path):
 		for filename in filenames:
@@ -25,7 +26,7 @@ def visitSubFolders(root_path, text_file):
 						text_file.write('\n')
 				file_count = file_count_in_directories[dirpath]
 				if file_count > 0:
-					length_equality_record = str(size) + ': ' + relative_url +' ---- ' + encountered_sizes[size] + '\n'
+					length_equality_record = str(size) + delimiter + filename + delimiter + relative_url + delimiter + encountered_sizes[size]
 					print(length_equality_record)
 					if text_file:
 						text_file.write(length_equality_record)
