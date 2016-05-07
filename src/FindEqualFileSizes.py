@@ -45,4 +45,3 @@ if __name__ == '__main__':
 		text_file = open(log_file, "w", encoding='UTF-8')
 		print('Log file: ' + log_file)
 	visitSubFolders(root_path, text_file)
-	print("Completed.")
