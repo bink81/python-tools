@@ -14,6 +14,8 @@ def findFiles(root_path):
 			lines = open(absolute_path, mode='r', encoding="ISO-8859-1")
 			environment_type_annotations = set()
 			for line in lines:
+				if line.strip().startswith("//"): 
+					continue # ignore comments
 				##print(line)
 				if "EnvironmentType.LOCAL" in line:
 					environment_type_annotations.add("LOCAL")
@@ -27,19 +29,18 @@ def findFiles(root_path):
 					environment_type_annotations.add("MOBILE_API")
 			if len(environment_type_annotations) > 1:
 				files_with_mixed_tests.append(absolute_path)
+				print (absolute_path + ":" + str(environment_type_annotations))
 	return files_with_mixed_tests
 
 def printReport(files_with_mixed_tests, root_path):
-	print('Root path: ' + root_path)
 	print('\n')
-	print('Exceeding relative paths (count: ' + str(len(files_with_mixed_tests)) + '):')
-	for url in sorted(files_with_mixed_tests):
-		print (url)
+	print('Root path: ' + root_path)
+	print('Count: ' + str(len(files_with_mixed_tests)))
 	
 if __name__ == '__main__':
 	parameters = sys.argv[1:]
 	if not parameters:
-		sys.exit("Parent folder path is required!\nUsage: 'FindTestsWithMixedContext.py <FOLDER_PATH>'")
+		sys.exit("Folder path is required!\nUsage: 'FindTestsWithMixedContext.py <FOLDER_PATH>'")
 	root_path = parameters[0]
 	files_with_mixed_tests = findFiles(root_path)
 	printReport(files_with_mixed_tests, root_path)
